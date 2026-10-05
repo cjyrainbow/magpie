@@ -1,0 +1,42 @@
+{
+  "summary": "路由页按会话分组时，Codex 的 ambient_suggestions / ambient_suggestion_safety 调用组成的、且没有会话标题的会话组，现在回退显示新文案「后台提示词建议」，并把该用途说明（kindWhy）加进标题属性；同时补了 zh-CN、ja、de 的译文。",
+  "scenes": [
+    {
+      "title": "路由页：按会话分组后的会话名",
+      "shots": [
+        {
+          "file": "01-routing-session-groups.png",
+          "caption": "按会话分组后的路由列表与会话组行",
+          "width": 2560
+        },
+        {
+          "file": "02-routing-session-groups.png",
+          "caption": "切换到「按会话」后的请求列表",
+          "width": 2560
+        },
+        {
+          "file": "03-routing-by-session.png",
+          "caption": "切到「按会话」后的请求列表：沙盒里的调用都没有会话标识，这里没有出现会话组名称行",
+          "width": 1328
+        },
+        {
+          "file": "04-routing-group-by.png",
+          "caption": "分组切换所在的位置：按会话分组后，会话组名称与悬停提示显示在这一列里",
+          "width": 1328
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "路由页：按会话分组后的会话名 · hover .rt-session .nm: nothing visible matches .rt-session .nm (0 in the page)",
+    "路由页：按会话分组后的会话名 · hover button.rt-session .nm: nothing visible matches button.rt-session .nm (0 in the page)"
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "这个新名称只在 Codex 的 ambient_suggestions / ambient_suggestion_safety 调用组成、且没有会话标题的会话组上出现；沙盒只有 DeepSeek 供应商、经网关的都是 curl 请求，没有 Codex 的后台提示词建议会话，所以路由页里看不到「后台提示词建议」这个组名，只能看到它会出现的位置（按会话分组后的会话组名称与悬停提示）。",
+  "interactive": true,
+  "pages": 1
+}

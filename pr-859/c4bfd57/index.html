@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>#859 界面预览 · c4bfd57</title>
+<style>:root{color-scheme:light dark;--bg:#f6f6f7;--fg:#1d1d1f;--muted:#6e6e73;--card:#fff;--line:#e5e5ea}
+@media (prefers-color-scheme:dark){:root{--bg:#111113;--fg:#f2f2f4;--muted:#9a9aa0;--card:#1c1c1f;--line:#2c2c30}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 -apple-system,"Segoe UI","PingFang SC","Noto Sans CJK SC",sans-serif}
+main{max-width:1100px;margin:0 auto;padding:28px 16px 60px}h1{font-size:20px;margin:0 0 4px}.m{color:var(--muted);font-size:13px;margin:0 0 20px}
+video,img{display:block;width:100%;border-radius:10px;border:1px solid var(--line);background:var(--card)}figure{margin:0 0 28px}figcaption{color:var(--muted);font-size:13px;margin-top:8px}
+a{color:inherit}</style>
+<main><h1>#859 界面预览</h1><p class="m">commit c4bfd57 · <a href="https://github.com/yetone/magpie/pull/859">回到 PR</a> · 路由页按会话分组时，Codex 的 ambient_suggestions / ambient_suggestion_safety 调用组成的、且没有会话标题的会话组，现在回退显示新文案「后台提示词建议」，并把该用途说明（kindWhy）加进标题属性；同时补了 zh-CN、ja、de 的译文。</p>
+<figure><video src="preview.mp4" controls autoplay muted playsinline poster="poster.png"></video><figcaption>红线是鼠标走过的轨迹，红色圆环是一次点击；底部文字是这一步在做什么。空格暂停，← → 逐段查看。</figcaption></figure>
+<figure><img src="01-routing-session-groups.png" alt="按会话分组后的路由列表与会话组行"><figcaption>路由页：按会话分组后的会话名 · 按会话分组后的路由列表与会话组行</figcaption></figure>
+<figure><img src="02-routing-session-groups.png" alt="切换到「按会话」后的请求列表"><figcaption>路由页：按会话分组后的会话名 · 切换到「按会话」后的请求列表</figcaption></figure>
+<figure><img src="03-routing-by-session.png" alt="切到「按会话」后的请求列表：沙盒里的调用都没有会话标识，这里没有出现会话组名称行"><figcaption>路由页：按会话分组后的会话名 · 切到「按会话」后的请求列表：沙盒里的调用都没有会话标识，这里没有出现会话组名称行</figcaption></figure>
+<figure><img src="04-routing-group-by.png" alt="分组切换所在的位置：按会话分组后，会话组名称与悬停提示显示在这一列里"><figcaption>路由页：按会话分组后的会话名 · 分组切换所在的位置：按会话分组后，会话组名称与悬停提示显示在这一列里</figcaption></figure>
+</main></html>

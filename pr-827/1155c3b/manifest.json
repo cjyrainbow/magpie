@@ -1,0 +1,52 @@
+{
+  "summary": "这个 PR 把 Aside「接入 magpie 提供方」和「选模型」在界面上拆成两件事：Agent 行/详情会显示 Aside 的运行状态和单个字段的说明，读取不到运行时会弹出「保存供下次启动使用」的确认，断开前先用纯计划做还原预览并且预览失败就禁止断开，同时补了中/日/德文案。",
+  "scenes": [
+    {
+      "title": "Agent 列表里的 Aside 行",
+      "shots": [
+        {
+          "file": "01-agents-expanded.png",
+          "caption": "展开后的 Agent 列表",
+          "width": 2560
+        },
+        {
+          "file": "02-agents-expanded.png",
+          "caption": "展开后的 Agent 列表：本机已安装的 Agent",
+          "width": 2560
+        },
+        {
+          "file": "03-install-list.png",
+          "caption": "可安装的 Agent 列表",
+          "width": 2560
+        }
+      ]
+    },
+    {
+      "title": "接入开关与断开预览",
+      "shots": [
+        {
+          "file": "04-agents-list.png",
+          "caption": "Agent 列表：沙盒里没有已安装的 Aside，只能看到这些行",
+          "width": 2560
+        },
+        {
+          "file": "05-agents-install.png",
+          "caption": "安装其他 Agent 的列表里也没有 Aside",
+          "width": 2560
+        }
+      ]
+    }
+  ],
+  "video": "preview.mp4",
+  "poster": "poster.png",
+  "errors": [
+    "Agent 列表里的 Aside 行 · hover .row.agent[data-id=\"aside\"]: nothing visible matches .row.agent[data-id=\"aside\"] (0 in the page)",
+    "接入开关与断开预览 · click .row.agent[data-id=\"aside\"] .ag-conn: nothing visible matches .row.agent[data-id=\"aside\"] .ag-conn (0 in the page)"
+  ],
+  "leak": false,
+  "skipped": null,
+  "mismatch": "",
+  "unseen": "沙盒里的 Aside 是全新安装、没有已保存的模型选择、也没有可用的 Aside 运行时，所以「无法连接 Aside，要保存此模型供下次启动使用吗？」这个确认框（需要在未接入/不可达状态下从模型选择器里挑一个模型）、「已保存供 Aside 下次启动使用」「没有已确认的恢复记录」「已配置图片生成，尚未验证」这些字段级提示，以及需要已有 magpie 模型选择才看得出的还原预览内容，都无法真实出现；只能展示这些变化所在的 Agents 页面和 Aside 那一行。",
+  "interactive": true,
+  "pages": 1
+}
